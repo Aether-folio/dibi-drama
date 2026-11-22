@@ -1,0 +1,45 @@
+#drama-dialog{width:min(1240px,96vw);max-width:96vw;height:92vh;max-height:92vh;padding:0;border:1px solid var(--line);border-radius:12px;background:var(--paper);color:var(--ink)}
+#drama-dialog[open]{display:flex;flex-direction:column}#drama-dialog::backdrop,.dr-note-dialog::backdrop{background:#0006}
+#drama-dialog .dr-head{display:flex;justify-content:space-between;gap:12px;align-items:center;padding:12px 16px;border-bottom:1px solid var(--line)}
+#drama-dialog h2,#drama-dialog h3{margin:0;font-size:16px}#drama-dialog h2{font-size:18px}
+#drama-dialog .dr-muted{color:var(--muted);font-size:12px}#drama-dialog .dr-row,.dr-note-dialog .dr-row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#drama-dialog .dr-between{justify-content:space-between}#drama-dialog .dr-tabs{display:flex;gap:6px;flex-wrap:wrap;padding:8px 16px;border-bottom:1px solid var(--line)}
+#drama-dialog .dr-tabs button[aria-pressed=true]{background:var(--accent);color:var(--accent-ink)}#drama-dialog .dr-main{flex:1;min-height:0;overflow:auto;padding:12px 16px}
+#drama-dialog .dr-field{display:block;margin:7px 0 0;min-width:0}#drama-dialog .dr-field>span{display:block;font-size:12px;color:var(--muted);margin-bottom:3px}
+#drama-dialog input:not([type=checkbox]),#drama-dialog textarea,#drama-dialog select,.dr-note-dialog textarea{width:100%;min-width:0;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--desk);color:var(--ink);font:inherit}
+#drama-dialog textarea{height:52px;min-height:46px;resize:vertical;line-height:1.5}#drama-dialog .dr-source{height:300px}
+#drama-dialog .dr-shot{border:1px solid var(--line);border-radius:8px;padding:10px 12px;margin:0 0 10px;background:var(--paper)}
+#drama-dialog .dr-meta{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,1.3fr) 85px 125px;gap:10px}
+#drama-dialog .dr-two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:10px}#drama-dialog .dr-check{display:flex;align-items:center;gap:6px;font-size:13px}
+#drama-dialog .dr-check input{width:auto}#drama-dialog .dr-inline{display:flex;align-items:center;gap:8px;white-space:nowrap}#drama-dialog .dr-inline select{width:130px}
+#drama-dialog details{margin-top:7px}#drama-dialog summary{cursor:pointer;color:var(--muted);font-size:12px;padding:3px 0}
+#drama-dialog .dr-toolbar{margin-bottom:10px}#drama-dialog .dr-footer{margin-top:10px}#drama-dialog .dr-refs{margin:10px 0}
+#drama-dialog .dr-video-settings{display:grid;grid-template-columns:100px 120px 120px 1fr;gap:10px;align-items:end}
+#drama-dialog .dr-timeline{white-space:pre-wrap;overflow-wrap:anywhere;font:inherit;font-size:13px;line-height:1.6;padding:10px;background:var(--desk);border-radius:7px}
+#drama-dialog .dr-media{display:flex;gap:8px;align-items:center;flex-wrap:wrap;background:var(--desk);padding:10px;border-radius:7px}
+#drama-dialog a{color:var(--accent);overflow-wrap:anywhere}#drama-status{padding:8px 16px;border-top:1px solid var(--line);font-size:12px;color:var(--muted)}
+#drama-dialog #drama-source-file{width:auto;max-width:60%}.dr-note-dialog{width:min(560px,90vw);padding:20px;background:var(--paper);color:var(--ink);border:1px solid var(--line);border-radius:12px}.dr-note-dialog textarea{height:120px;margin:8px 0}
+@media(max-width:780px){#drama-dialog .dr-meta,#drama-dialog .dr-video-settings{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}#drama-dialog .dr-head{align-items:flex-start;flex-wrap:wrap}#drama-dialog .dr-inline{flex-wrap:wrap}}
+@media(max-width:480px){#drama-dialog .dr-main{padding:10px}#drama-dialog .dr-shot{padding:9px}#drama-dialog .dr-two{grid-template-columns:1fr}#drama-dialog .dr-tabs{padding:8px}#drama-dialog textarea{height:70px}}
+
+#drama-dialog .dr-preview{display:block;width:100%;height:220px;object-fit:contain;border-radius:8px;background:var(--desk);margin:8px 0}
+#drama-dialog .dr-price{font-weight:700}
+#drama-dialog .dr-generate{display:inline-flex;width:auto;max-width:100%;gap:14px;align-items:center;border-radius:24px;padding:9px 16px;margin-left:auto}
+#drama-dialog .dr-generate .dr-price{color:inherit}
+#drama-dialog .dr-generate span:last-child{font-size:20px}
+#drama-dialog .dr-footer>.dr-muted{order:-1}
+
+#drama-dialog textarea[data-prompt-job]{height:150px;min-height:100px}#drama-dialog .dr-confirm{margin-left:auto;background:var(--accent);color:var(--accent-ink);font-weight:600}
+
+/* Video prompts stay fully visible; the page, never the text field, scrolls. */
+#drama-dialog .dr-video-editor{margin:20px 0;padding:16px;background:var(--paper);border:2px solid var(--line);border-radius:12px;min-width:0}
+#drama-dialog textarea.dr-video-prompt{width:100%;min-height:240px;max-height:none!important;overflow:hidden;resize:none;line-height:1.8;box-sizing:border-box}
+#drama-dialog .dr-video-full{white-space:pre-wrap;overflow-wrap:anywhere;max-height:none;overflow:visible;font:inherit;line-height:1.8}
+#drama-dialog .dr-image-bindings{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(260px,100%),1fr));gap:12px;margin:12px 0}
+#drama-dialog .dr-image-binding{display:flex;flex-direction:column;gap:8px;min-width:0;padding:12px;border:1px solid var(--line);border-radius:10px}
+#drama-dialog .dr-image-binding img{max-height:180px;object-fit:contain;width:100%}
+#drama-dialog .dr-reference-sentences{white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.7}
+#drama-dialog mark{background:#dbe7cf;color:#263f29;border-radius:4px;padding:2px 4px}
+#drama-dialog .dr-provider{padding:14px 16px;margin-bottom:16px;border:1px solid var(--line);border-radius:10px;background:var(--desk)}
+.dr-note-dialog input[type=password]{display:block;box-sizing:border-box;width:100%;margin:8px 0;padding:10px;border:1px solid var(--line);border-radius:8px;background:var(--paper);color:var(--ink)}
+#drama-dialog .dr-footer button{max-width:100%;white-space:normal}

@@ -1,0 +1,23 @@
+{
+  "name": "dibi-drama",
+  "version": "0.5.8",
+  "description": "独立的本地漫剧制作插件，支持原文拆镜、分镜递笔、素材管理与视频制作。",
+  "author": {
+    "name": "Local Writing Tools"
+  },
+  "license": "MIT",
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "requires_local_executor": true,
+  "interface": {
+    "displayName": "递笔漫剧制作",
+    "shortDescription": "拆分镜、管理素材和制作视频",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive"
+    ],
+    "defaultPrompt": [
+      "打开递笔漫剧制作"
+    ]
+  }
+}

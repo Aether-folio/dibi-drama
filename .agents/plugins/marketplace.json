@@ -1,0 +1,20 @@
+{
+  "name": "dibi-drama-local",
+  "interface": {
+    "displayName": "递笔漫剧制作"
+  },
+  "plugins": [
+    {
+      "policy": {
+        "authentication": "ON_INSTALL",
+        "installation": "AVAILABLE"
+      },
+      "source": {
+        "source": "local",
+        "path": "./runtime"
+      },
+      "category": "Productivity",
+      "name": "dibi-drama"
+    }
+  ]
+}

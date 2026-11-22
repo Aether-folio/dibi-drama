@@ -1,0 +1,6 @@
+node_modules/
+runtime/
+.test-temp/
+码字工作台/
+.env*
+*.log

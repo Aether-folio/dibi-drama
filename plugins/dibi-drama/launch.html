@@ -1,0 +1,52 @@
+<main id="drama-launch" class="workflow-home">
+  <section id="workflow-shelf" aria-labelledby="workflow-heading">
+    <header class="workflow-header"><h1 id="workflow-heading">漫剧工作流</h1><button id="workflow-trash" type="button" aria-pressed="false">已删除</button></header>
+    <div id="workflow-grid" class="workflow-grid">
+      <button id="drama-launch-open" class="workflow-card workflow-add" type="button" disabled>
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+        <span>新建工作流</span>
+      </button>
+    </div>
+  </section>
+  <section id="workflow-editor" aria-labelledby="workflow-page-title" hidden>
+    <button id="workflow-back" type="button">返回书架</button>
+    <header class="workflow-header">
+      <h1 id="workflow-page-title" tabindex="-1">剧本创作</h1>
+      <label class="workflow-name">工作流名称<input id="workflow-name" maxlength="80"></label>
+    </header>
+    <div id="workflow-source-page">
+      <label class="workflow-field" for="workflow-source">小说片段</label>
+      <textarea id="workflow-source" maxlength="60000" placeholder="粘贴要改编的小说剧情…"></textarea>
+      <div class="workflow-actions">
+        <button id="workflow-convert" class="primary" type="button">小说转剧本</button>
+        <button id="workflow-manual" type="button">手搓剧本</button>
+      </div>
+    </div>
+    <div id="workflow-script-page" hidden>
+      <div class="workflow-actions">
+        <button id="workflow-split" class="primary" type="button">拆分镜</button>
+        <button id="workflow-production" type="button">进入制作</button>
+        <button id="workflow-novel" type="button">查看小说片段</button>
+      </div>
+      <div id="workflow-script-editor" class="dr-storyboard-editor"></div>
+    </div>
+    <section id="workflow-conversion" class="workflow-conversion" hidden>
+      <p id="workflow-job-status" role="status"></p>
+      <pre id="workflow-candidate" hidden></pre>
+      <div class="workflow-actions">
+        <button id="workflow-adopt" type="button" hidden>使用这版剧本</button>
+        <button id="workflow-retry" type="button" hidden>重新发送转换任务</button>
+      </div>
+    </section>
+  </section>
+  <dialog id="workflow-delete-dialog" aria-labelledby="workflow-delete-title" aria-describedby="workflow-delete-copy">
+    <h2 id="workflow-delete-title">删除工作流？</h2>
+    <p id="workflow-delete-copy"></p>
+    <p id="workflow-delete-error" role="alert"></p>
+    <div class="workflow-actions">
+      <button id="workflow-delete-cancel" type="button" autofocus>取消</button>
+      <button id="workflow-delete-confirm" class="primary" type="button">删除</button>
+    </div>
+  </dialog>
+  <p id="drama-launch-status" class="workflow-status" role="status">正在读取工作流…</p>
+</main>
